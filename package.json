@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/CSS/style.css --dir dest -w",
+    "start": "parcel ./*.html",
+    "dev": "parcel index.html",
+    "prod": "parcel build index.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url 'https://github.com/sakshamwithagarwal/portfolio.git'",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakshamwithagarwal/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakshamwithagarwal/portfolio/issues"
+  },
+  "homepage": "https://github.com/sakshamwithagarwal/portfolio#readme",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "locomotive-scroll": "^4.1.4",
+    "popper.js": "^1.16.1",
+    "postcss-preset-env": "^7.8.3",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.56.2"
+  }
+}
